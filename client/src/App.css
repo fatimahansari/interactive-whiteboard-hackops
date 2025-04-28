@@ -1,0 +1,186 @@
+@import "@fontsource/roboto/400.css";
+
+body {
+  background-color: rgb(59, 59, 59);
+  height: 100%;
+  overflow: hidden; 
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-components {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid white;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+  color: white;
+  width: 250px;
+  height: 530px;
+  transition: width 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.sidebar-expanded {
+  width: 250px;
+}
+
+.sidebar-collapsed {
+  width: 0px;
+}
+
+.pull-tab {
+  background: #444;
+  color: white;
+  padding: 4px 3px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: right 0.3s ease-in-out;
+}
+
+.linewidth-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 190px;
+  gap: 1px;
+}
+
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(50, 50, 50);
+}
+
+.color-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px
+}
+
+.color-option {
+  width: 25px;
+  height: 15px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
+  height: 80px;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  background-color: rgb(59, 59, 59);
+}
+
+.sharekey-box-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sharekey-box {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(55, 55, 55);
+  border: 2px solid white;
+  border-radius: 10px 10px 10px 10px;
+  color: white;
+}
+
+.key-box {
+  width: 320px;
+  height: auto;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.join-box-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.join-box {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(55, 55, 55);
+  border: 2px solid white;
+  border-radius: 10px 10px 10px 10px;
+  color: white;
+}
+
+.undo-redo-box {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  z-index: 10;
+  left: 99%;
+  top: 3%;
+  transform: translate(-99%, -3%);
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid white;
+  background-color: rgb(55, 55, 55);
+}
+
+.undo-redo-button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
