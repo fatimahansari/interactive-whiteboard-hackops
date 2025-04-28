@@ -1,0 +1,37 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on PR to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # This step checks out your repository code
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Use your preferred Node.js version
+
+    - name: Install dependencies
+      run: npm install  # Installs the dependencies listed in package.json
+
+    - name: Run tests
+      run: npm test  # Replace with your testing command if you have tests
+
+    - name: Build client
+      run: npm run build  # Build the client app (if you have a build step)
+
+    - name: Deploy (Optional)
+      run: |
+        echo "Deployment steps here"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for deployment access
