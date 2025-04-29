@@ -11,7 +11,7 @@ import * as fabric from "fabric";
 import { io } from "socket.io-client";
 
 //socket settings to connect to server.
-const socket = io("http://192.168.111.236:3000", {
+const socket = io("http://192.168.0.102:3000", {
   transports: ["websocket", "polling"],
   withCredentials: true,
 });
@@ -406,7 +406,7 @@ const App = ({email, mykey}) => {
       return;
     }
 
-    const response = await fetch(`http://192.168.111.236:3000/checkroom/${Joiningkey}`);
+    const response = await fetch(`http://192.168.0.102:3000/checkroom/${Joiningkey}`);
     const response_msg = await response.json();
     if(response_msg.message === "session found") {
       socket.emit("user-disconnected", { roomId, userId: socket.id });

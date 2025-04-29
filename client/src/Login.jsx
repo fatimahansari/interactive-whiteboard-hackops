@@ -101,7 +101,7 @@ const Login = () => {
       return;
     }
 
-    const resposne = await fetch(`http://192.168.111.236:3000/checkpass/${Email}/${Pass}`, {method: "GET"});
+    const resposne = await fetch(`http://192.168.0.102:3000/checkpass/${Email}/${Pass}`, {method: "GET"});
     const response_msg = await resposne.json();
     if(response_msg.message === "no password found") {
       setEmailError(true);
@@ -149,7 +149,7 @@ const Login = () => {
       return;
     }
 
-    const response = await fetch("http://192.168.111.236:3000/create", {
+    const response = await fetch("http://192.168.0.102:3000/create", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({FirstName, LastName, Email, Pass})
@@ -187,7 +187,7 @@ const Login = () => {
       return;
     }
 
-    const response = await fetch(`http://192.168.111.236:3000/updatepass/${Email}/${Pass}`, {method: "PUT"});
+    const response = await fetch(`http://192.168.0.102:3000/updatepass/${Email}/${Pass}`, {method: "PUT"});
     const response_msg = await response.json();
     console.log(response_msg.message);
     if(response_msg.message === "update successful") {

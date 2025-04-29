@@ -109,7 +109,7 @@ app.post("/create", async (req, res) => {
       let key = "";
       while(responsei === "key repeated") {
         key = generate_key();
-        responsei = await fetch("http://192.168.111.236:3000/insertkey", {
+        responsei = await fetch("http://192.168.0.102:3000/insertkey", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ Email, key })
@@ -224,6 +224,10 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, "192.168.111.236", () => {
-  console.log("express server is working at 192.168.111.236:3000");
+// server.listen(3000, "192.168.0.102", () => {
+//   console.log("express server is working at 192.168.0.102:3000");
+// });
+
+app.listen(5000, '0.0.0.0', () => {
+  console.log("Server running on port 5000");
 });
