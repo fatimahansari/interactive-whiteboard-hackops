@@ -38,7 +38,6 @@ interactive-whiteboard-hackops/
 - **Real-time Communication:** Socket.IO
 - **CI/CD:** GitHub Actions
 - **Version Control:** Git
-- **Deployment:** (You can add if deployed)
 - **Optional:** Docker, Monitoring (Planned)
 
 ---
