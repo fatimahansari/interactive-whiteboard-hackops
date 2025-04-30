@@ -18,14 +18,36 @@ A real-time collaborative whiteboard web application. Users can draw, write, and
 ```
 interactive-whiteboard-hackops/
 │
-├── client/                     #Frontend(React+ Vite)
-├── server/                     #Backend(Express + Socket.IO)
-├── .github/
+├── client/                          # Frontend (React + Vite)
+│   ├── Dockerfile                   # Dockerfile for frontend
+│   ├── index.html                   # HTML entry point
+│   ├── package.json                 # Frontend dependencies and scripts
+│   ├── package-lock.json
+│   ├── vite.config.js               # Vite configuration
+│   ├── eslint.config.js             # ESLint configuration
+│   └── src/                         # React source code
+│       ├── App.jsx
+│       ├── App.css
+│       ├── Login.jsx
+│       ├── Login.css
+│       └── main.jsx
+│
+├── server/                        
+│   ├── Dockerfile                 
+│   ├── db.js                   
+│   ├── index.js                    
+│   ├── package.json                 
+│   └── package-lock.json
+│
+├── .github/                        
 │   └── workflows/
-│       └── ci-cd.yml
-├── .gitignore
-├── README.md
-└── LICENSE
+│       └── ci-cd.yml               
+│
+├── docker-compose.yml              
+├── .gitignore                      
+├── README.md                       
+└── LICENSE                         
+
 
 ```
 
